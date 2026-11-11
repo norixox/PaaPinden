@@ -5,5 +5,6 @@ namespace PåPinden.Data
 {
     public class PaaPindenDbContext(DbContextOptions<PaaPindenDbContext> options) : IdentityDbContext<ApplicationUser>(options)
     {
+
     }
 }
