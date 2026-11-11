@@ -2,11 +2,9 @@
 {
     public enum ReactionType
     {
-        Like = 
-        Comment
-
-        Share
-        
+        Like,
+        Comment,
+        Share,
         Save
     }
 }
