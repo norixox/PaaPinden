@@ -1,6 +1,6 @@
-﻿using PåPinden.Data;
+﻿using PåPinden.Components.Data;
 
-namespace PåPinden.Models
+namespace PåPinden.Components.Models
 {
     public class Follow
     {

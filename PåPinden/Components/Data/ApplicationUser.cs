@@ -1,13 +1,13 @@
 using Microsoft.AspNetCore.Identity;
 using Microsoft.EntityFrameworkCore;
-using PåPinden.Models;
+using PåPinden.Components.Models;
 using System.ComponentModel.DataAnnotations.Schema;
 
-namespace PåPinden.Data
+namespace PåPinden.Components.Data
 {
     // Add profile data for application users by adding properties to the ApplicationUser class
     public class ApplicationUser : IdentityUser
-    {
+    {      
         public string Name { get; set; } = string.Empty;
 
         public ICollection<Post> Posts { get; set; } = new List<Post>();

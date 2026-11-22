@@ -1,6 +1,6 @@
 using Microsoft.AspNetCore.Components;
 using Microsoft.AspNetCore.Identity;
-using PåPinden.Data;
+using PåPinden.Components.Data;
 
 namespace PåPinden.Components.Account
 {

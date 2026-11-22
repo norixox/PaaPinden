@@ -2,7 +2,7 @@ using Microsoft.AspNetCore.Components.Authorization;
 using Microsoft.AspNetCore.Components.Server;
 using Microsoft.AspNetCore.Identity;
 using Microsoft.Extensions.Options;
-using PåPinden.Data;
+using PåPinden.Components.Data;
 using System.Security.Claims;
 
 namespace PåPinden.Components.Account
