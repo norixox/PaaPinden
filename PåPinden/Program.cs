@@ -3,7 +3,7 @@ using Microsoft.AspNetCore.Identity;
 using Microsoft.EntityFrameworkCore;
 using PåPinden.Components;
 using PåPinden.Components.Account;
-using PåPinden.Data;
+using PåPinden.Components.Data;
 
 var builder = WebApplication.CreateBuilder(args);
 

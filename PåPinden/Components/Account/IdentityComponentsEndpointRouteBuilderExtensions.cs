@@ -7,7 +7,7 @@ using Microsoft.AspNetCore.Mvc;
 using Microsoft.Extensions.Primitives;
 using PåPinden.Components.Account.Pages;
 using PåPinden.Components.Account.Pages.Manage;
-using PåPinden.Data;
+using PåPinden.Components.Data;
 using System.Security.Claims;
 using System.Text.Json;
 

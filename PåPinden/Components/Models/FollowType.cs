@@ -1,4 +1,4 @@
-﻿namespace PåPinden.Models
+﻿namespace PåPinden.Components.Models
 {
     public enum FollowType
     {
