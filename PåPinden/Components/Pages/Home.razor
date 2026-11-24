@@ -1,7 +1,39 @@
-﻿@page "/"
+@page "/"
 
-<PageTitle>Home</PageTitle>
+<PageTitle>Feed</PageTitle>
 
-<h1>Hello, world!</h1>
+<div class="feed-tabs" role="group" aria-label="Choose feed">
+    <button type="button"
+            class="feed-tab @(showForYou ? "active" : string.Empty)"
+            aria-pressed="@(showForYou ? "true" : "false")"
+            @onclick="ShowForYou">
+        For you
+    </button>
+    <button type="button"
+            class="feed-tab @(!showForYou ? "active" : string.Empty)"
+            aria-pressed="@(!showForYou ? "true" : "false")"
+            @onclick="ShowFeed">
+        Feed
+    </button>
+</div>
 
-Welcome to your new app.
+<section class="feed-content" aria-live="polite">
+    @if (showForYou)
+    {
+        <h2>For you</h2>
+        <p>Recommended posts will appear here.</p>
+    }
+    else
+    {
+        <h2>Feed</h2>
+        <p>Recent posts from accounts you follow will appear here.</p>
+    }
+</section>
+
+@code {
+    private bool showForYou = true;
+
+    private void ShowForYou() => showForYou = true;
+
+    private void ShowFeed() => showForYou = false;
+}
