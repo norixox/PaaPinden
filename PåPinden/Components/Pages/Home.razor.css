@@ -1,0 +1,53 @@
+.feed-tabs {
+    min-height: 56px;
+    display: flex;
+    align-items: center;
+    gap: 20px;
+    border-bottom: 1px solid #e9e9e1;
+}
+
+.feed-tab {
+    height: 56px;
+    position: relative;
+    display: inline-flex;
+    align-items: center;
+    padding: 0 2px;
+    border: 0;
+    background: transparent;
+    color: #788078;
+    font: inherit;
+    font-size: 0.86rem;
+    font-weight: 600;
+    cursor: pointer;
+}
+
+.feed-tab:hover,
+.feed-tab:focus-visible {
+    color: #344b39;
+}
+
+.feed-tab:focus-visible {
+    border-radius: 4px;
+    outline: 2px solid #9cad98;
+    outline-offset: 3px;
+}
+
+.feed-tab.active {
+    color: #252c26;
+}
+
+.feed-tab.active::after {
+    position: absolute;
+    right: 0;
+    bottom: -1px;
+    left: 0;
+    height: 2px;
+    border-radius: 2px 2px 0 0;
+    background: #526b56;
+    content: "";
+}
+
+.feed-content {
+    min-height: 100px;
+    padding: 20px 2px 0;
+}
