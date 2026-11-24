@@ -40,10 +40,10 @@
 
         <AuthorizeView>
             <Authorized>
-                <NavLink class="nav-link" href="Account/Manage" @onclick='() => InvokeAction("feed")' aria-label="Your profile">
+                <a class="nav-link" href="/Account/Manage" data-enhance-nav="false" aria-label="Your profile">
                     <svg viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="8" r="3.7" /><path d="M4.5 20c.6-3.8 3.5-5.8 7.5-5.8s6.9 2 7.5 5.8" /></svg>
                     <span>Profile</span>
-                </NavLink>
+                </a>
             </Authorized>
         </AuthorizeView>
     </nav>
@@ -52,13 +52,13 @@
         <AuthorizeView>
             <Authorized>
                 <div class="account-card">
-                    <NavLink href="Account/Manage" class="account-link" title="Manage your account">
+                    <a href="/Account/Manage" class="account-link" data-enhance-nav="false" title="Manage your account">
                         <span class="account-avatar" aria-hidden="true">
                             <svg viewBox="0 0 24 24"><circle cx="12" cy="8" r="3.7" /><path d="M4.5 20c.6-3.8 3.5-5.8 7.5-5.8s6.9 2 7.5 5.8" /></svg>
                         </span>
                         <span class="account-name">@context.User.Identity?.Name</span>
-                    </NavLink>
-                    <form action="Account/Logout" method="post">
+                    </a>
+                    <form action="/Account/Logout" method="post">
                         <AntiforgeryToken />
                         <input type="hidden" name="ReturnUrl" value="@currentUrl" />
                         <button type="submit" class="logout-button" title="Sign out" aria-label="Sign out">
@@ -69,13 +69,13 @@
             </Authorized>
             <NotAuthorized>
                 <div class="account-card signed-out">
-                    <NavLink class="account-link" href="Account/Login">
+                    <a class="account-link" href="/Account/Login" data-enhance-nav="false">
                         <span class="account-avatar" aria-hidden="true">
                             <svg viewBox="0 0 24 24"><circle cx="12" cy="8" r="3.7" /><path d="M4.5 20c.6-3.8 3.5-5.8 7.5-5.8s6.9 2 7.5 5.8" /></svg>
                         </span>
                         <span class="account-name">Sign in</span>
-                    </NavLink>
-                    <NavLink class="join-link" href="Account/Register">Join</NavLink>
+                    </a>
+                    <a class="join-link" href="/Account/Register" data-enhance-nav="false">Join</a>
                 </div>
             </NotAuthorized>
         </AuthorizeView>
